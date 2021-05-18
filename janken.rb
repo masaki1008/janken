@@ -24,8 +24,8 @@ class Game
         
         # 勝った時
         elsif (program_hand - player_hand == 1 || program_hand - player_hand == -2)
-            puts "じゃんけん王: あ、あり得ん。この俺様がじゃんけんで負けるなんて、、、、"
-            puts "じゃんけん王: だが、まだだ、まだ、あっち向いてホイが残ってる！"
+            puts "じゃんけん王: あ、あり得ん。この俺様がじゃんけんで負けるなんて、、\nだが、まだだ、まだ、あっち向いてホイが残ってる！"
+            puts "あなた: これで終わりだ〜！"
             puts "あっち向いて〜"
             puts "[0]:上\n[1]:右\n[2]:下\n[3]:左"
             
@@ -51,13 +51,12 @@ class Game
                     next_game = janken
                 end    
             end
-            janken = false
             
         # 負けた時
         else
             puts "じゃんけん王: ぐはははは！だから言ったろう。俺様にじゃんけんで勝てるわけがないと！"
             puts "あんた: くっ、、まだだ！まだあっち向いてホイが残ってる！"
-            puts "あっち向いてホイ〜"
+            puts "あっち向いて〜"
             puts "[0]:上\n[1]:右\n[2]:下\n[3]:左"
             
             player_hand = gets.to_i
@@ -74,8 +73,8 @@ class Game
                 directions = false
                 
             else
-                puts "くっ、危なかった。"
-                puts "じゃんけん王: 中々しぶとい。。"
+                puts "あんた: ふぅ〜、危なかった。"
+                puts "じゃんけん王: ちっ。しぶとい奴め。"
                 puts "もう一度じゃんけんからやりなおそう！"
                 
                 next_game = true
@@ -83,7 +82,6 @@ class Game
                     next_game = janken
                 end
             end
-            janken = false
         end
     end
 end
